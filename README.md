@@ -25,7 +25,7 @@ javac -d out src/*.java
 java -cp out sortcompare.Runner
 ```
 
-## Resultados (gerados aqui e replicáveis no Runner)
+## Resultados (pode conferir também dentro da pasta source_results o index.html com uma pag web básica com todos esses resultados e seus arquivos)!
 
 ### Vetor 1 — Tabela completa
 | Algoritmo   |   Swaps |   Iterações | Está ordenado?   |
