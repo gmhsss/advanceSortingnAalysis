@@ -1,0 +1,8 @@
+| Algoritmo   |   Swaps |   Iterações | Está ordenado?   |
+|:------------|--------:|------------:|:-----------------|
+| Bubble      |       0 |         210 | True             |
+| Bucket      |       0 |          41 | True             |
+| Cocktail    |       0 |          20 | True             |
+| Comb        |       0 |         118 | True             |
+| Gnome       |       0 |          20 | True             |
+| Selection   |       0 |         210 | True             |

@@ -1,0 +1,453 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Resultados de Ordenação</title><style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;margin:32px;background:#fafafa;color:#111}
+h1{margin:0 0 16px 0;font-size:28px}
+h2{margin:28px 0 8px 0;font-size:20px}
+section{background:#fff;padding:16px 20px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #e5e7eb;padding:8px 10px;text-align:left}
+th{background:#f3f4f6}
+caption{caption-side:top;text-align:left;font-weight:600;margin-bottom:8px}
+.small{font-size:12px;color:#555}
+a{color:#0a58ca;text-decoration:none}
+a:hover{text-decoration:underline}
+</style></head><body>
+<h1>Resultados de Ordenação — CSV/Markdown</h1>
+<p class='small'>Este arquivo é autônomo (CSS embutido). Você pode publicar no GitHub Pages ou abrir localmente.</p>
+<section><h2>Arquivos brutos</h2><ul>
+<li><a href='vetor1_full.csv'>vetor1_full.csv</a></li>
+<li><a href='vetor1_rank_iters.csv'>vetor1_rank_iters.csv</a></li>
+<li><a href='vetor1_rank_swaps.csv'>vetor1_rank_swaps.csv</a></li>
+<li><a href='vetor2_full.csv'>vetor2_full.csv</a></li>
+<li><a href='vetor2_rank_iters.csv'>vetor2_rank_iters.csv</a></li>
+<li><a href='vetor2_rank_swaps.csv'>vetor2_rank_swaps.csv</a></li>
+<li><a href='vetor3_full.csv'>vetor3_full.csv</a></li>
+<li><a href='vetor3_rank_iters.csv'>vetor3_rank_iters.csv</a></li>
+<li><a href='vetor3_rank_swaps.csv'>vetor3_rank_swaps.csv</a></li>
+<li><a href='vetor1_full.md'>vetor1_full.md</a></li>
+<li><a href='vetor1_rank_iters.md'>vetor1_rank_iters.md</a></li>
+<li><a href='vetor1_rank_swaps.md'>vetor1_rank_swaps.md</a></li>
+<li><a href='vetor2_full.md'>vetor2_full.md</a></li>
+<li><a href='vetor2_rank_iters.md'>vetor2_rank_iters.md</a></li>
+<li><a href='vetor2_rank_swaps.md'>vetor2_rank_swaps.md</a></li>
+<li><a href='vetor3_full.md'>vetor3_full.md</a></li>
+<li><a href='vetor3_rank_iters.md'>vetor3_rank_iters.md</a></li>
+<li><a href='vetor3_rank_swaps.md'>vetor3_rank_swaps.md</a></li>
+</ul></section>
+<section>
+<h2>Vetor 1 — Tabela completa</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+      <th>Iterações</th>
+      <th>Está ordenado?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bubble</td>
+      <td>78</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Bucket</td>
+      <td>23</td>
+      <td>64</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Cocktail</td>
+      <td>78</td>
+      <td>160</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Comb</td>
+      <td>22</td>
+      <td>138</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Gnome</td>
+      <td>78</td>
+      <td>176</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Selection</td>
+      <td>18</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Vetor 2 — Tabela completa</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+      <th>Iterações</th>
+      <th>Está ordenado?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bubble</td>
+      <td>0</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Bucket</td>
+      <td>0</td>
+      <td>41</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Cocktail</td>
+      <td>0</td>
+      <td>20</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Comb</td>
+      <td>0</td>
+      <td>118</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Gnome</td>
+      <td>0</td>
+      <td>20</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Selection</td>
+      <td>0</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Vetor 3 — Tabela completa</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+      <th>Iterações</th>
+      <th>Está ordenado?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bubble</td>
+      <td>190</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Bucket</td>
+      <td>97</td>
+      <td>138</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Cocktail</td>
+      <td>190</td>
+      <td>200</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Comb</td>
+      <td>18</td>
+      <td>138</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Gnome</td>
+      <td>190</td>
+      <td>400</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Selection</td>
+      <td>10</td>
+      <td>210</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por trocas — Vetor 1</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Selection</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Comb</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Bucket</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Bubble</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Cocktail</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Gnome</td>
+      <td>78</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por iterações — Vetor 1</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Iterações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Bucket</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Comb</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cocktail</td>
+      <td>160</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Gnome</td>
+      <td>176</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Bubble</td>
+      <td>210</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Selection</td>
+      <td>210</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por trocas — Vetor 2</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Bubble</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bucket</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cocktail</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Comb</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Gnome</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Selection</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por iterações — Vetor 2</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Iterações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Cocktail</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Gnome</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Bucket</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Comb</td>
+      <td>118</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Bubble</td>
+      <td>210</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Selection</td>
+      <td>210</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por trocas — Vetor 3</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Swaps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Selection</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Comb</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Bucket</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Bubble</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Cocktail</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Gnome</td>
+      <td>190</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+<h2>Ranking por iterações — Vetor 3</h2>
+<table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Posição</th>
+      <th>Algoritmo</th>
+      <th>Iterações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Bucket</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Comb</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cocktail</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Bubble</td>
+      <td>210</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Selection</td>
+      <td>210</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Gnome</td>
+      <td>400</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+</body></html>

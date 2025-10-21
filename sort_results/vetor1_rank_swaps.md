@@ -1,0 +1,8 @@
+|   Posição | Algoritmo   |   Swaps |
+|----------:|:------------|--------:|
+|         1 | Selection   |      18 |
+|         2 | Comb        |      22 |
+|         3 | Bucket      |      23 |
+|         4 | Bubble      |      78 |
+|         5 | Cocktail    |      78 |
+|         6 | Gnome       |      78 |
