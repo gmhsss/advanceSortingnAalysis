@@ -19,13 +19,16 @@ vetor3 = (99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 
 ```
 
 ## Como executar
-Compile e rode (Java 17+):
 ```
 javac -d out src/*.java
 java -cp out sortcompare.Runner
 ```
 
-## Resultados (pode conferir também dentro da pasta source_results o index.html com uma pag web básica com todos esses resultados e seus arquivos)!
+## Resultados, onde você pode também conferir dentro da pasta 
+```
+source_results -> index.html
+```
+(pag web básica com todos esses resultados abaixo e seus arquivos)!
 
 ### Vetor 1 — Tabela completa
 | Algoritmo   |   Swaps |   Iterações | Está ordenado?   |
