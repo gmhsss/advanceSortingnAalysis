@@ -1,5 +1,5 @@
 # Sort Comparison em Java  Comb, Gnome, Bucket vs Bubble, Selection, Cocktail  
-Readme ultra detalhado para estudo e prova de autoria. Projeto didático que compara seis algoritmos de ordenação clássicos, medindo contadores educacionais, com reprodutibilidade e relatório em HTML.
+Projeto que compara seis algoritmos de ordenação clássicos, medindo contadores educacionais, com reprodutibilidade e relatório em HTML.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17%2B-blue" />
@@ -63,16 +63,6 @@ Após a execução, o Runner grava source_results/index.html com as tabelas e ra
 
 ---
 
-## Parâmetros do Runner opcionais  
-Sem parâmetros roda os três vetores. Exemplos de flags opcionais caso habilitadas no Runner  
-java sortcompare.Runner --no-html --repeat=5 --warmup=2 --time
-
----
-Significados  
-no-html não gera relatório, repeat repete a bateria e agrega média de métricas, warmup rodadas de aquecimento sem registrar métricas, time registra millis e nanos além de swaps e iterações.
-
----
-
 ## Complexidade assintótica resumo  
 | Algoritmo | Melhor | Médio | Pior | Memória |
 |:--|:--:|:--:|:--:|:--:|
@@ -90,9 +80,10 @@ Leituras rápidas
 
 ---
 
-## Pseudocódigos compactos para prova de autoria  
+## Pseudocódigos compactos 
+---
+## Bubble Sort  
 
-Bubble Sort  
 repete até semTroca  
  semTroca = true  
  para i de 0 até n - 2  
@@ -100,10 +91,12 @@ repete até semTroca
    troca(a[i], a[i + 1])  
    swaps++  
    semTroca = false  
-  iter++  
-Resumo: Usa flag semTroca para detectar se o vetor já está ordenado. Cada passagem empurra o maior elemento para o final. Estável, in-place e adaptativo no melhor caso (O(n)).  
+  iter++ 
+  
+## Resumo: Usa flag semTroca para detectar se o vetor já está ordenado. Cada passagem empurra o maior elemento para o final. Estável, in-place e adaptativo no melhor caso (O(n)).  
+---
+## Cocktail Sort  
 
-Cocktail Sort  
 inicio = 0  
 fim = n - 1  
 enquanto inicio < fim  
@@ -121,9 +114,11 @@ enquanto inicio < fim
    swaps++  
   iter++  
  inicio++  
-Resumo: É o Bubble bidirecional. Remove a limitação de sempre percorrer um lado. Reduz passes desnecessários quando quase ordenado.  
+ 
+## Resumo: É o Bubble bidirecional. Remove a limitação de sempre percorrer um lado. Reduz passes desnecessários quando quase ordenado.  
+---
+## Selection Sort  
 
-Selection Sort  
 para i de 0 até n - 2  
  min = i  
  para j de i + 1 até n - 1  
@@ -133,9 +128,11 @@ para i de 0 até n - 2
  se min ≠ i  
   troca(a[i], a[min])  
   swaps++  
-Resumo: Busca o menor elemento do subvetor e coloca na posição correta. Uma troca por laço externo. Poucos swaps, mas muitas comparações. Não é estável.  
 
-Comb Sort  
+## Resumo: Busca o menor elemento do subvetor e coloca na posição correta. Uma troca por laço externo. Poucos swaps, mas muitas comparações. Não é estável.  
+---
+## Comb Sort  
+
 gap = n  
 troca = true  
 enquanto gap > 1 ou troca = true  
@@ -147,9 +144,11 @@ enquanto gap > 1 ou troca = true
    swaps++  
    troca = true  
   iter++  
-Resumo: Usa gap decrescente para comparar elementos distantes. Reduz inversões longas. Em média O(n log n), pior caso O(n²).  
 
-Gnome Sort  
+## Resumo: Usa gap decrescente para comparar elementos distantes. Reduz inversões longas. Em média O(n log n), pior caso O(n²).  
+---
+## Gnome Sort  
+
 i = 1  
 enquanto i < n  
  se a[i] >= a[i - 1]  
@@ -162,9 +161,10 @@ enquanto i < n
   senão  
    i++  
  iter++  
-Resumo: Corrige inversões localmente. Simples, estável e in-place, porém lento em vetores grandes.  
+## Resumo: Corrige inversões localmente. Simples, estável e in-place, porém lento em vetores grandes.  
+---
+## Bucket Sort com Inserção por bucket  
 
-Bucket Sort com Inserção por bucket  
 cria k buckets vazios  
 para cada elemento x no vetor  
  índice = floor(k * (x - min) / (max - min + 1))  
@@ -174,16 +174,16 @@ para cada bucket
  conta deslocamentos adjacentes como swaps  
  soma comparações como iter++  
 concatena buckets ordenados  
-Resumo: Divide o vetor em faixas e ordena cada faixa internamente. Complexidade próxima de O(n + k). Trocas equivalem a deslocamentos internos na inserção.  
-
-Resumo comparativo final  
+## Resumo: Divide o vetor em faixas e ordena cada faixa internamente. Complexidade próxima de O(n + k). Trocas equivalem a deslocamentos internos na inserção.  
+---
+### Resumo comparativo final  
 Algoritmo | Melhor caso | Pior caso | Estável | In-place | Tipo  
-Bubble | O(n) | O(n²) | ✔ | ✔ | Comparação  
-Cocktail | O(n) | O(n²) | ✔ | ✔ | Comparação  
-Selection | O(n²) | O(n²) | ✖ | ✔ | Comparação  
-Comb | O(n log n) | O(n²) | ✖ | ✔ | Comparação  
-Gnome | O(n) | O(n²) | ✔ | ✔ | Comparação  
-Bucket | O(n + k) | O(n²) | Depende | Parcial | Distribuição  
+        Bubble | O(n) | O(n²) | sim | sim | Comparação  
+        Cocktail | O(n) | O(n²) | sim | sim | Comparação  
+        Selection | O(n²) | O(n²) | nao | sim | Comparação  
+        Comb | O(n log n) | O(n²) | nao | sim | Comparação  
+        Gnome | O(n) | O(n²) |sim |sim | Comparação  
+        Bucket | O(n + k) | O(n²) | Depende | Parcial | Distribuição  
 
 
 ---
@@ -194,14 +194,6 @@ Bucket | O(n + k) | O(n²) | Depende | Parcial | Distribuição
 3. Função isSorted verifica ordem e falha aborta a gravação de resultados.  
 4. Bucket lida com min=max colocando todos no bucket zero.  
 5. Inteiros negativos são suportados por normalização de faixa min..max.
-
----
-
-## Metodologia de benchmark sugerida opção de tempo  
-1. Warmup 1 a 3 rodadas para aquecer JIT.  
-2. Repetições R e média dos tempos e contadores.  
-3. Meça nanos com System.nanoTime e mostre ms arredondados.  
-4. GC explicita não é necessária para estes tamanhos, mas pode ser testada.  
 
 
 ---
@@ -290,29 +282,8 @@ Ranking por iterações vetor 3
 | 5 | Selection | 210 |
 | 6 | Gnome | 400 |
 
-Como interpretar  
+## Como interpretar  ?
 Selection minimiza trocas porque só troca uma vez por posição, mas paga em iterações. Comb vence em vetores com inversões longas. Bucket brilha quando a distribuição é razoavelmente uniforme e os buckets ficam pequenos. Cocktail melhora Bubble no melhor caso pois detecta ordenação mais cedo.
 
----
-
-## Como estender com um novo algoritmo  
-1. Crie uma classe em impl que implemente Sorter.  
-2. Instrumente contadores incrementando metrics.iteracoes a cada passo e metrics.swaps a cada troca adjacente.  
-3. Use clones do array de entrada para não poluir execuções seguintes.  
-4. Registre no Runner adicionando a instância na lista de sorters.  
-5. Se gerar relatório HTML, atualize HtmlReport para incluir o novo algoritmo nas tabelas.
-
-Exemplo de assinatura  
-```java
-public final class HeapSort implements Sorter {
-  public String name() { return "Heap"; }
-  public Metrics sort(int[] a) {
-    Metrics m = new Metrics(name(), a.length);
-    // build heap contando iterações e swaps
-    // heapify e extrações
-    m.sorted = Validators.isSorted(a);
-    return m;
-  }
-}
 
 
